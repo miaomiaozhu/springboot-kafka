@@ -26,6 +26,8 @@ public class KafkaReceiver {
             Object message = kafkaMessage.get();
 
             log.info("----------------- record =" + record);
+            log.info("----------------- topic =" + record.topic());
+            log.info("----------------- partition =" + record.partition());
             log.info("------------------ message =" + message);
         }
 

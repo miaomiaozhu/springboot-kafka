@@ -1,14 +1,14 @@
 package com.example.kafka;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Component;
+        import com.google.gson.Gson;
+        import com.google.gson.GsonBuilder;
+        import org.slf4j.LoggerFactory;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.kafka.core.KafkaTemplate;
+        import org.springframework.stereotype.Component;
 
-import java.util.Date;
-import java.util.UUID;
+        import java.util.Date;
+        import java.util.UUID;
 
 /**
  * @ClassName KafkaSender
