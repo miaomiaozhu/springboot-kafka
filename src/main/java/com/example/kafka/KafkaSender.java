@@ -34,6 +34,6 @@ public class KafkaSender {
         message.setMsg(UUID.randomUUID().toString());
         message.setSendTime(new Date());
         log.info("+++++++++++++++++++++  message = {}", gson.toJson(message));
-        kafkaTemplate.send("test", gson.toJson(message));
+        kafkaTemplate.send("test-1","1330000", gson.toJson(message));
     }
 }

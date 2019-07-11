@@ -18,14 +18,15 @@ import java.util.Optional;
 public class KafkaReceiver {
     private final org.slf4j.Logger log = LoggerFactory.getLogger(getClass());
 
-    @KafkaListener(topics = {"test"})
+    @KafkaListener(topics = {"test-1"})
     public void listen(ConsumerRecord<?, ?> record) {
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());
         if (kafkaMessage.isPresent()) {
 
             Object message = kafkaMessage.get();
 
-            log.info("----------------- record =" + record);
+//            log.info("----------------- record =" + record);
+            log.info("----------------- key =" + record.key());
             log.info("----------------- topic =" + record.topic());
             log.info("----------------- partition =" + record.partition());
             log.info("------------------ message =" + message);
